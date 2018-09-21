@@ -274,7 +274,7 @@ public class DefaultHelperRegistry implements HelperRegistry {
   private ScriptEngine engine() {
     synchronized (this) {
       if (this.engine == null) {
-        this.engine = new ScriptEngineManager().getEngineByName("nashorn");
+        this.engine = new ScriptEngineManager(null).getEngineByName("nashorn");
 
         this.engine.put("Handlebars_java", this);
 
